@@ -10,7 +10,7 @@ export const SplashScreen: React.FC<SplashScreenProps> = ({ isInitializing, onFi
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
-    let interval: NodeJS.Timeout;
+    let interval: ReturnType<typeof setInterval>;
     
     if (isInitializing) {
       // Simulate progress up to 90%
